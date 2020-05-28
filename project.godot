@@ -16,8 +16,17 @@ _global_script_class_icons={
 [application]
 
 config/name="demo tecnica plagued"
-run/main_scene="res://scenes/Battle.tscn"
+run/main_scene="res://scenes/menu.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=385
+window/size/height=224
+window/size/test_width=640
+window/size/test_height=360
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [importer_defaults]
 
