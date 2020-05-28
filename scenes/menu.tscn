@@ -36,7 +36,7 @@ margin_top = 23.0
 margin_right = 295.0
 margin_bottom = 63.0
 rect_min_size = Vector2( 295, 40 )
-text = "Play"
+text = "agus"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 margin_top = 67.0
