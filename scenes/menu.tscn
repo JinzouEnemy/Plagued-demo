@@ -36,13 +36,13 @@ margin_top = 23.0
 margin_right = 295.0
 margin_bottom = 63.0
 rect_min_size = Vector2( 295, 40 )
-text = "agus"
+text = "PLAY"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 margin_top = 67.0
 margin_right = 295.0
 margin_bottom = 107.0
 rect_min_size = Vector2( 295, 40 )
-text = "Quit"
+text = "QUIT"
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Button2_pressed"]

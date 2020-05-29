@@ -28,6 +28,10 @@ window/size/test_height=360
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
+[gui]
+
+theme/custom_font="res://fonts/FuentePixel.tres"
+
 [importer_defaults]
 
 texture={
