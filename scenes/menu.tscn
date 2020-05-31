@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Title Screen/Start.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Title Screen/Plagued.png" type="Texture" id=3]
+[ext_resource path="res://fonts/Title Screen/Quit.png" type="Texture" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -22,27 +25,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -147.5
-margin_top = -65.0
-margin_right = 147.5
-margin_bottom = 65.0
+margin_left = -96.5
+margin_top = -32.0
+margin_right = 198.5
+margin_bottom = 112.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-margin_top = 23.0
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
 margin_right = 295.0
-margin_bottom = 63.0
-rect_min_size = Vector2( 295, 40 )
-text = "PLAY"
+margin_bottom = 68.0
+texture_normal = ExtResource( 2 )
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
-margin_top = 67.0
+[node name="TextureButton2" type="TextureButton" parent="VBoxContainer"]
+margin_top = 72.0
 margin_right = 295.0
-margin_bottom = 107.0
-rect_min_size = Vector2( 295, 40 )
-text = "QUIT"
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+margin_bottom = 144.0
+texture_normal = ExtResource( 4 )
+
+[node name="Plagued" type="Sprite" parent="."]
+position = Vector2( 184, 40 )
+texture = ExtResource( 3 )
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/TextureButton2" to="." method="_on_TextureButton2_pressed"]

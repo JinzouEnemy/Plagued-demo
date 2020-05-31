@@ -3,7 +3,7 @@ extends Node2D
 #zona de declaración de variables
 onready var player = $player
 onready var enemy = $enemy
-onready var botones = $UI/buttonpanel
+onready var botones = $UI/buttonpanel/GridContainer
 
 #función para controlar el turno del jugador, el yield
 #espera hasta que el player emita la señal de turnend
