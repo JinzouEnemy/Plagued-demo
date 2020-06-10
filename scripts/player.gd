@@ -1,5 +1,9 @@
 extends Node2D
 
+#le decimos al script que vamos a usar el resource
+#battleunits
+const battleunits = preload("res://BattleUnits.tres")
+
 #zona de declaración de variables
 var maxhp = 25
 var hp = maxhp setget setHp
@@ -22,3 +26,13 @@ func setAcc(cantidad):
 	acc = min(cantidad,maxacc)
 	if acc == 0:
 		emit_signal("turnEnd")
+
+
+#cuando el nodo entra en escena lo conectamos con nuestro
+#scriptable object
+func _ready():
+	battleunits.player = self
+
+#cuando el nodo sale de escena lo desconectamos
+func _exit_tree():
+	battleunits.player = null

@@ -1,15 +1,15 @@
 extends Node2D
 
+const battleunits = preload("res://BattleUnits.tres")
+
 #zona de declaración de variables
-onready var player = $player
-onready var enemy = $enemy
 onready var botones = $UI/buttonpanel/GridContainer
 
 #función para controlar el turno del jugador, el yield
 #espera hasta que el player emita la señal de turnend
 func turnoplayer():
-	if enemy != null:
-		botones.show()
+	var player = battleunits.player
+	botones.show()
 	player.acc = player.maxacc
 	yield(player,"turnEnd")
 	turnoenemigo()
@@ -19,17 +19,19 @@ func turnoplayer():
 #se llama a la func atacar del enemigo
 func turnoenemigo():
 	botones.hide()
+	var enemy = battleunits.enemy
 	if enemy != null:
-		enemy.atacar(player)
+		enemy.atacar()
 		turnoplayer()
 
 
-func _on_enemy_muerto():
-	botones.hide()
-	enemy = null
-
 func _ready():
+	var enemy = battleunits.enemy
+	var player = battleunits.player
 	if player.vel > enemy.vel:
 		turnoplayer()
 	else:
 		turnoenemigo()
+
+func _on_enemy_muerto():
+	botones.hide()
