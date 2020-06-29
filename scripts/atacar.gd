@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 func _on_atacar_pressed():
 	var main = get_tree().current_scene
