@@ -4,7 +4,6 @@
 [ext_resource path="res://sprites/fantasma2.png" type="Texture" id=2]
 
 [node name="enemy" type="Node2D"]
-position = Vector2( 310.481, 70.986 )
 z_index = 1
 script = ExtResource( 1 )
 __meta__ = {
